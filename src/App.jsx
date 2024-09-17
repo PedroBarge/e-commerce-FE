@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello</h1>
+      <h1>E-Commerce</h1>
       <div>
         <UploadImageComponent />
         <ImageListComponent />

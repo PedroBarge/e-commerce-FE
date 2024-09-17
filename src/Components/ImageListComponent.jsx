@@ -2,32 +2,31 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const ImageListComponent = () => {
-    const [images, setImages] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await axios.get('http://localhost:8080/image');
-                setImages(response.data);
-            } catch (error) {
-                console.error('Erro ao buscar imagens:', error);
-            }
-        };
-
-        fetchImages();
+        fetch('http://localhost:8080/product')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error('Erro ao buscar produtos:', error));
     }, []);
 
     return (
         <div>
-            <h2>Lista de Imagens</h2>
-            <div className="image-list">
-                {images.map(image => (
-                    <div key={image.id} className="image-item">
-                        <img src={`http://localhost:8080/image/${image.id}`} alt={image.name} style={{ width: '200px', height: '200px' }} />
-                        <p>{image.name}</p>
-                    </div>
-                ))}
-            </div>
+            {products.map(product => (
+                <div key={product.id}>
+                    <h2>{product.name}</h2>
+                    <p>{product.description}</p>
+                    <p>Price: {product.price}</p>
+                    {product.linkPhoto && (
+                        <img 
+                            src={`http://localhost:8080/${product.linkPhoto}`} 
+                            alt={product.name} 
+                            width="200" 
+                        />
+                    )}
+                </div>
+            ))}
         </div>
     );
 };
