@@ -6,6 +6,7 @@ const UploadProductImage = () => {
         name: '',
         description: '',
         price: '',
+        category: '',
     });
 
     const handleFileChange = (e) => {
@@ -61,6 +62,13 @@ const UploadProductImage = () => {
                 name="price" 
                 placeholder="Preço" 
                 value={product.price} 
+                onChange={handleInputChange} 
+            />
+            <input 
+                type="text" 
+                name="category" 
+                placeholder="Categoria" 
+                value={product.category} 
                 onChange={handleInputChange} 
             />
             <input type="file" onChange={handleFileChange} />
