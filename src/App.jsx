@@ -1,4 +1,4 @@
-import UploadImageComponent from "./Components/UploadImageComponent"
+import UploadProductImage from "./Components/UploadProductImage"
 import ImageListComponent from "./Components/ImageListComponent"
 function App() {
 
@@ -6,7 +6,7 @@ function App() {
     <>
       <h1>E-Commerce</h1>
       <div>
-        <UploadImageComponent />
+        <UploadProductImage />
         <ImageListComponent />
       </div>
     </>

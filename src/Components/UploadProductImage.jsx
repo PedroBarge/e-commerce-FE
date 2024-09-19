@@ -7,6 +7,7 @@ const UploadProductImage = () => {
         description: '',
         price: '',
         category: '',
+        clientId: '',
     });
 
     const handleFileChange = (e) => {
