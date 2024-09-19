@@ -7,7 +7,6 @@ const UploadProductImage = () => {
         description: '',
         price: '',
         category: '',
-        clientId: '',
     });
 
     const handleFileChange = (e) => {
@@ -65,13 +64,21 @@ const UploadProductImage = () => {
                 value={product.price} 
                 onChange={handleInputChange} 
             />
-            <input 
-                type="text" 
+            <select 
                 name="category" 
-                placeholder="Categoria" 
                 value={product.category} 
-                onChange={handleInputChange} 
-            />
+                onChange={handleInputChange}>
+
+                <option value="" disabled>Selecione uma categoria</option>
+                <option value="ELECTRONICS">Eletrónica</option>
+                <option value="CLOTHING">Roupa</option>
+                <option value="HOME_APPLIANCES">Eletrodomésticos</option>
+                <option value="BOOKS">Livros</option>
+                <option value="TOYS">Brinquedos</option>
+                <option value="FURNITURE">Mobilia</option>
+                <option value="SPORTS">Desporto</option>
+            </select>
+            
             <input type="file" onChange={handleFileChange} />
             <button type="submit">Salvar Produto</button>
         </form>
