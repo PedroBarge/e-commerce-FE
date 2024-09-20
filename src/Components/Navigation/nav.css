@@ -1,0 +1,37 @@
+nav {
+  background-color: #ffffff; /* Altere para a cor que preferir */
+  padding: 10px 0; /* Espaçamento vertical para a barra */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: blue;
+}
+
+nav ul li img {
+  width: 100px; /* Defina a largura da imagem */
+  height: 100px; /* Defina a altura da imagem */
+  object-fit: contain; /* Ajusta a imagem para caber dentro sem distorcer */
+}
