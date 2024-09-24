@@ -11,10 +11,10 @@ export const Navigation = () => {
             </a>
           </li>
           <li>
-            <a href="#services">A tua conta</a>
+            <a href="#myAccount">A tua conta</a>
           </li>
           <li>
-            <a href="#contact">Vender</a>
+            <a href="#sell"><button id="btnSell">Vender</button></a>
           </li>
         </ul>
       </nav>

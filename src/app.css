@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(61, 59, 59);
+}
+
+.enter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+}

@@ -1,6 +1,7 @@
 nav {
   background-color: #ffffff; /* Altere para a cor que preferir */
-  padding: 10px 0; /* Espaçamento vertical para a barra */
+  padding: 0;
+  margin: 0;
 }
 
 nav ul {
@@ -27,11 +28,29 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: blue;
+  color: #868686;
 }
 
 nav ul li img {
   width: 100px; /* Defina a largura da imagem */
   height: 100px; /* Defina a altura da imagem */
   object-fit: contain; /* Ajusta a imagem para caber dentro sem distorcer */
+}
+
+/*-----------*/
+#btnSell {
+  background-color: blue;
+  color: white;
+  width: 150px; /* Define a largura do botão */
+  height: 50px; /* Define a altura do botão */
+  padding: 10px 20px; /* Espaço interno no botão */
+  font-size: 16px; /* Tamanho da fonte dentro do botão */
+  border-radius: 5px; /* Bordas arredondadas (opcional) */
+}
+
+#btnSell:hover{
+  cursor: pointer;
+  background-color: white;
+  border: blue solid 5px;
+  color: black;
 }
